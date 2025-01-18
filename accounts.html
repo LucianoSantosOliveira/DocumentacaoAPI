@@ -1,0 +1,147 @@
+<html> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <div class="content">
+        <h1>
+         Accounts
+        </h1>
+        <h2>
+         Create An Account → Envelope&lt;Account&gt;
+        </h2>
+        <p>
+         <span style="color: #00ff00;">
+          POST
+         </span>
+         /accounts
+        </p>
+        <p>
+         Create an account (only available for tenant admins at this time)
+        </p>
+        <h2>
+         Delete A Specific Account → Envelope&lt; id &gt;
+        </h2>
+        <p>
+         <span style="color: #ff0000;">
+          DELETE
+         </span>
+         /accounts/{account_id}
+        </p>
+        <p>
+         Delete a specific account (only available for tenant admins at this time). This is a permanent operation that will delete any zones or other resources under the account
+        </p>
+        <h3>
+         Security
+        </h3>
+        <p>
+         API Email + API Key
+        </p>
+        <p>
+         The previous authorization scheme for interacting with the Cloudflare API, used in conjunction with a Global API key.
+        </p>
+        <p>
+         Example:
+         <code>
+          X-Auth-Email: user@example.com
+         </code>
+        </p>
+        <p>
+         The previous authorization scheme for interacting with the Cloudflare API. When possible, use API tokens instead of Global API keys.
+        </p>
+        <p>
+         Example:
+         <code>
+          X-Auth-Key: 146dcf6a6e94967b7d8af9a8a194
+         </code>
+        </p>
+        <h3>
+         Parameters
+        </h3>
+        <p>
+         <code>
+          account_id: string
+         </code>
+        </p>
+        <p>
+         The account ID of the account to be deleted
+        </p>
+        <h3>
+         Response fields
+        </h3>
+        <p>
+         <code>
+          errors: Array&lt;ResponseInfo&gt;
+         </code>
+        </p>
+        <p>
+         <code>
+          messages: Array&lt;ResponseInfo&gt;
+         </code>
+        </p>
+        <p>
+         <code>
+          success: true
+         </code>
+        </p>
+        <p>
+         Whether the API call was successful
+        </p>
+        <p>
+         <code>
+          result: { id }
+         </code>
+         <span style="color: #808080;">
+          OPTIONAL
+         </span>
+        </p>
+        <div class="code-block">
+         <div class="copy-button">
+          <i class="fas fa-copy">
+          </i>
+         </div>
+         <pre>
+    curl https://api.cloudflare.com/client/v4/accounts/$ACCOUNT_ID \
+        -X DELETE \
+        -H "X-Auth-Email: $CLOUDFLARE_EMAIL" \
+        -H "X-Auth-Key: $CLOUDFLARE_API_KEY"
+                    </pre>
+        </div>
+        <div class="code-block">
+         <div class="copy-button">
+          <i class="fas fa-copy">
+          </i>
+         </div>
+         <pre>
+    {
+        "errors": [
+            {
+                "code": 1000,
+                "message": "message"
+            }
+        ],
+        "messages": [
+            {
+                "code": 1000,
+                "message": "message"
+            }
+        ],
+        "success": true,
+        "result": {
+            "id": "023e105f4ecef8ad9ca31a8372d0c353"
+        }
+    }
+                    </pre>
+        </div>
+        <h2>
+         Account Details → Envelope&lt;Account&gt;
+        </h2>
+        <p>
+         <span style="color: #00ff00;">
+          GET
+         </span>
+         /accounts/{account_id}
+        </p>
+        <p>
+         Get information about a specific account that you are a member of.
+        </p>
+       </div>
+      </div>
+</html>
