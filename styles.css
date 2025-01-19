@@ -65,9 +65,10 @@ body {
      .code-block {
          background-color: #2d2d2d;
          padding: 20px;
-         border-radius: 4px;
-         margin-top: 20px;
+         border-radius: 0px 4px 4px 4px;
+         margin-bottom: 20px;
      }
+
      .code-block pre {
          margin: 0;
          color: #00ff00;
@@ -150,4 +151,20 @@ body {
         border: 0;
         padding-bottom: 56.25%; /
       }
-      
+
+      .CodeTabs_active {
+        background: #2d2d2d;
+        color: #ffffff;
+    }
+    
+    .botao-fixo {
+        background-color: #2d2d2d;;  /* Cor de fundo */
+        color: white;               /* Cor do texto */
+        border: none;               /* Remove a borda */
+        padding: 15px 32px;         /* Tamanho do botão */
+        text-align: center;         /* Alinha o texto */
+        text-decoration: none;      /* Remove underline */
+        display: inline-block;      /* Alinhamento do botão */
+        cursor: pointer;           /* Mostra o cursor de "mãozinha" */
+        border-radius: 4px 4px 0 0;         /* Borda arredondada */
+    }

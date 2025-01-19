@@ -92,56 +92,75 @@
           OPTIONAL
          </span>
         </p>
-        <div class="code-block">
-         <div class="copy-button">
-          <i class="fas fa-copy">
-          </i>
-         </div>
-         <pre>
-    curl https://api.cloudflare.com/client/v4/accounts/$ACCOUNT_ID \
-        -X DELETE \
-        -H "X-Auth-Email: $CLOUDFLARE_EMAIL" \
-        -H "X-Auth-Key: $CLOUDFLARE_API_KEY"
-                    </pre>
+
+        <div role="tablist">
+            <div role="tablist">
+                <button role="tab" class="botao-fixo CodeTabs_active">Bash</button>
+            </div>
+            <div class="code-block" role="tabpanel">
+                <div class="copy-button">
+                    <i class="fas fa-copy">
+                 </i>
+                </div>
+                <pre>
+           curl https://api.cloudflare.com/client/v4/accounts/$ACCOUNT_ID \
+               -X DELETE \
+               -H "X-Auth-Email: $CLOUDFLARE_EMAIL" \
+               -H "X-Auth-Key: $CLOUDFLARE_API_KEY"
+                </pre>
+               </div>
+
+
         </div>
-        <div class="code-block">
-         <div class="copy-button">
-          <i class="fas fa-copy">
-          </i>
-         </div>
-         <pre>
-    {
-        "errors": [
-            {
-                "code": 1000,
-                "message": "message"
-            }
-        ],
-        "messages": [
-            {
-                "code": 1000,
-                "message": "message"
-            }
-        ],
-        "success": true,
-        "result": {
-            "id": "023e105f4ecef8ad9ca31a8372d0c353"
-        }
-    }
-                    </pre>
+
+
+
+        <div role="tablist">
+            <div role="tablist">
+                <button role="tab" class="botao-fixo CodeTabs_active">JSON</button>
+            </div>
+            <div class="code-block" role="tabpanel">
+                <div class="copy-button">
+                 <i class="fas fa-copy">
+                 </i>
+                </div>
+                <pre>
+           {
+               "errors": [
+                   {
+                       "code": 1000,
+                       "message": "message"
+                   }
+               ],
+               "messages": [
+                   {
+                       "code": 1000,
+                       "message": "message"
+                   }
+               ],
+               "success": true,
+               "result": {
+                   "id": "023e105f4ecef8ad9ca31a8372d0c353"
+               }
+           }
+                           </pre>
+               </div>
+               <h2>
+                Account Details → Envelope&lt;Account&gt;
+               </h2>
+               <p>
+                <span style="color: #00ff00;">
+                 GET
+                </span>
+                /accounts/{account_id}
+               </p>
+               <p>
+                Get information about a specific account that you are a member of.
+               </p>
+              </div>
+             </div>
         </div>
-        <h2>
-         Account Details → Envelope&lt;Account&gt;
-        </h2>
-        <p>
-         <span style="color: #00ff00;">
-          GET
-         </span>
-         /accounts/{account_id}
-        </p>
-        <p>
-         Get information about a specific account that you are a member of.
-        </p>
-       </div>
-      </div>
+
+
+        
 </html>
